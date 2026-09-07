@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="src/css/adote.css">
+    <title>PagAdocao</title>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+
+        <div class="paws-background"></div>
+
+        <div class="header-top">
+
+            <a href="index.html" class="logo">
+                <img src="src/images/Logo.png" alt="Patas ao Lar">
+                <span>Patas ao Lar</span>
+            </a>
+
+            <a href="index.html" class="voltar">
+                <i class="fa-solid fa-arrow-left"></i>
+                Voltar
+            </a>
+
+        </div>
+
+        <div class="titulo">
+
+            <h1>Encontre seu novo amigo</h1>
+
+            <p>
+                Encontre um companheiro que combine com você.
+            </p>
+
+        </div>
+
+        <!-- FILTROS -->
+        <div class="filtros">
+
+            <!-- PESQUISA -->
+            <div class="campo pesquisa">
+
+                <label for="pesquisa">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    Pesquisar
+                </label>
+
+                <input type="text" id="pesquisa" placeholder="Digite o nome do animal...">
+
+            </div>
+
+
+            <!-- ESPÉCIE -->
+            <div class="campo">
+
+                <label for="especie">
+                    <i class="fa-solid fa-paw"></i>
+                    Espécie
+                </label>
+
+                <select id="especie">
+
+                    <option value="todos">Todos</option>
+                    <option value="cachorro">Cachorro</option>
+                    <option value="gato">Gato</option>
+
+                </select>
+
+            </div>
+
+
+            <!-- SEXO -->
+            <div class="campo">
+
+                <label for="sexo">
+                    <i class="fa-solid fa-venus-mars"></i>
+                    Sexo
+                </label>
+
+                <select id="sexo">
+
+                    <option value="todos">Todos</option>
+                    <option value="macho">Macho</option>
+                    <option value="femea">Fêmea</option>
+
+                </select>
+
+            </div>
+
+
+            <!-- IDADE -->
+            <div class="campo">
+
+                <label for="idade">
+                    <i class="fa-solid fa-cake-candles"></i>
+                    Idade
+                </label>
+
+                <select id="idade">
+
+                    <option value="todos">Todas</option>
+                    <option value="filhote">Filhote</option>
+                    <option value="adulto">Adulto</option>
+                    <option value="idoso">Idoso</option>
+
+                </select>
+
+            </div>
+
+
+            <!-- PORTE -->
+            <div class="campo">
+
+                <label for="porte">
+                    <i class="fa-solid fa-dog"></i>
+                    Porte
+                </label>
+
+                <select id="porte">
+
+                    <option value="todos">Todos</option>
+                    <option value="pequeno">Pequeno</option>
+                    <option value="medio">Médio</option>
+                    <option value="grande">Grande</option>
+
+                </select>
+
+            </div>
+
+
+            <!-- LIMPAR -->
+            <button id="limpar-filtros" class="btn-limpar">
+
+                <i class="fa-solid fa-rotate-left"></i>
+
+                Limpar filtros
+
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- CONTEÚDO -->
+    <main>
+
+        <div class="resultado">
+
+            <h2>Animais disponíveis</h2>
+
+            <span id="contador">
+                6 animais encontrados
+            </span>
+
+        </div>
+
+
+        <!-- CARDS -->
+        <section class="animais" id="animais">
+
+            <!-- THOR -->
+            <div class="pet-card" data-nome="thor" data-especie="cachorro" data-sexo="macho" data-idade="adulto"
+                data-porte="medio">
+
+                <img src="src/images/pets/cao1.jpg" alt="Thor">
+
+                <div class="pet-info">
+                    <h3>Thor</h3>
+
+                    <div class="pet-dados">
+                        <span>🎂 2 anos</span>
+                        <span><i class="fa-solid fa-mars"></i> Macho</span>
+                        <span>📏 Médio</span>
+                    </div>
+
+                    <button class="btn-adotar">Quero Adotar</button>
+                </div>
+            </div>
+
+
+            <!-- LUNA -->
+            <div class="pet-card" data-nome="luna" data-especie="gato" data-sexo="femea" data-idade="filhote"
+                data-porte="pequeno">
+
+                <img src="src/images/pets/gato3.jpg" alt="Luna">
+
+                <div class="pet-info">
+                    <h3>Luna</h3>
+
+                    <div class="pet-dados">
+                        <span>🎂 8 meses</span>
+                        <span>♀ Fêmea</span>
+                        <span>📏 Pequeno</span>
+                    </div>
+
+                    <button class="btn-adotar">Quero Adotar</button>
+                </div>
+            </div>
+
+
+            <!-- MAX -->
+            <div class="pet-card" data-nome="max" data-especie="cachorro" data-sexo="macho" data-idade="adulto"
+                data-porte="medio">
+
+                <img src="src/images/pets/cao3.jpg" alt="Max">
+
+                <div class="pet-info">
+                    <h3>Max</h3>
+
+                    <div class="pet-dados">
+                        <span>🎂 4 anos</span>
+                        <span>♂ Macho</span>
+                        <span>📏 Médio</span>
+                    </div>
+
+                    <button class="btn-adotar">Quero Adotar</button>
+                </div>
+            </div>
+
+
+            <!-- MEL -->
+            <div class="pet-card" data-nome="mel" data-especie="gato" data-sexo="femea" data-idade="adulto"
+                data-porte="pequeno">
+
+                <img src="src/images/pets/gato1.jpg" alt="Mel">
+
+                <div class="pet-info">
+                    <h3>Mel</h3>
+
+                    <div class="pet-dados">
+                        <span>🎂 2 anos</span>
+                        <span>♀ Fêmea</span>
+                        <span>📏 Pequeno</span>
+                    </div>
+
+                    <button class="btn-adotar">Quero Adotar</button>
+                </div>
+            </div>
+
+
+            <!-- ZEUS -->
+            <div class="pet-card" data-nome="zeus" data-especie="cachorro" data-sexo="macho" data-idade="idoso"
+                data-porte="grande">
+
+                <img src="src/images/pets/cao2.png" alt="Zeus">
+
+                <div class="pet-info">
+                    <h3>Zeus</h3>
+
+                    <div class="pet-dados">
+                        <span>🎂 9 anos</span>
+                        <span>♂ Macho</span>
+                        <span>📏 Grande</span>
+                    </div>
+
+                    <button class="btn-adotar">Quero Adotar</button>
+                </div>
+            </div>
+
+
+            <!-- BELA -->
+            <div class="pet-card" data-nome="bela" data-especie="cachorro" data-sexo="femea" data-idade="filhote"
+                data-porte="medio">
+
+                <img src="src/images/pets/gato2.jpg" alt="Bela">
+
+                <div class="pet-info">
+                    <h3>Bela</h3>
+
+                    <div class="pet-dados">
+                        <span>🎂 10 meses</span>
+                        <span>♀ Fêmea</span>
+                        <span>📏 Médio</span>
+                    </div>
+
+                    <button class="btn-adotar">Quero Adotar</button>
+                </div>
+            </div>
+
+        </section>
+
+        <button id="btn-veja-mais" class="btn-veja-mais">
+            Veja Mais
+        </button>
+
+        <!-- SEM RESULTADOS -->
+        <div class="sem-resultados" id="sem-resultados">
+
+            <i class="fa-solid fa-paw"></i>
+
+            <h2>Nenhum animal encontrado</h2>
+
+            <p>Tente alterar ou limpar os filtros.</p>
+
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        <div class="paws-background-footer"></div>
+
+        <!-- LOGO CENTRAL -->
+        <div class="footer-logo">
+
+            <img src="src/images/Logo.png" alt="Patas ao Lar">
+
+            <h2>Patas ao Lar</h2>
+
+            <p>
+                Conectando animais a novos lares.
+            </p>
+
+        </div>
+
+
+        <!-- LINKS -->
+        <div class="footer-links">
+
+            <a href="index.html">Início</a>
+
+            <a href="adote.html">Adote</a>
+
+            <a href="index.html#como-ajudar">Como Ajudar</a>
+
+            <a href="index.html#contato">Contato</a>
+
+        </div>
+
+
+        <!-- REDES -->
+        <div class="footer-redes">
+
+            <h3>Siga-nos</h3>
+
+            <div class="redes-icons">
+
+                <a href="#">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Patas ao Lar. Todos os direitos reservados.
+            </p>
+
+            <p>
+                Feito com Aumor
+            </p>
+
+        </div>
+
+    </footer>
+
+    <script src="src/javascript/adote.js"></script>
+</body>
+
+</html>

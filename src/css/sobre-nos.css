@@ -1,0 +1,282 @@
+body {
+    position: relative;
+
+    margin: 0;
+    padding: 45px 7%;
+
+    background-color: #FFF8F0;
+
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.paws-background {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+.paw {
+    position: absolute;
+
+    color: #5F7F70;
+
+    opacity: 0.15;
+
+    pointer-events: none;
+}
+
+main {
+    position: relative;
+
+    z-index: 1;
+
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+
+/* =========================
+   INTRODUÇÃO
+========================= */
+
+.sobre-introducao {
+    text-align: center;
+}
+
+.sobre-introducao h1 {
+    margin: 0 auto 22px;
+
+    max-width: 750px;
+
+    font-size: 30px;
+    line-height: 1.2;
+
+    color: #5F7F70;
+}
+
+.sobre-introducao p {
+    max-width: 750px;
+
+    margin: 12px auto;
+
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+
+.sobre-banner {
+    width: 100%;
+    margin: 35px auto 0;
+}
+
+.sobre-banner img {
+    display: block;
+
+    width: 100%;
+    height: 300px;
+
+    object-fit: cover;
+
+    border-radius: 22px;
+}
+
+.sobre-bloco {
+    margin-top: 80px;
+}
+
+.sobre-texto {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.sobre-texto h2 {
+    margin-bottom: 18px;
+
+    font-size: 26px;
+
+    color: #5F7F70;
+}
+
+.sobre-texto p {
+    margin: 12px 0;
+
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.como-ajudar {
+    margin-top: 80px;
+}
+
+.como-ajudar h2 {
+    margin-bottom: 35px;
+
+    font-size: 26px;
+
+    color: #5F7F70;
+}
+
+.ajuda-linha {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 50px;
+
+    margin-bottom: 70px;
+}
+
+.ajuda-texto {
+    flex: 1;
+}
+
+.ajuda-texto p {
+    margin: 0;
+
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.ajuda-imagem {
+    width: 38%;
+
+    flex-shrink: 0;
+}
+
+.ajuda-imagem img {
+    display: block;
+
+    width: 100%;
+    height: 260px;
+
+    object-fit: contain;
+
+    border-radius: 25px;
+}
+
+.sobre-final {
+    margin-top: 90px;
+
+    padding: 50px 20px;
+
+    text-align: center;
+
+    border-radius: 25px;
+
+    background-color: #FFFFFF;
+}
+
+.sobre-final h2 {
+    margin-bottom: 15px;
+
+    font-size: 28px;
+
+    color: #5F7F70;
+}
+
+.sobre-final p {
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 30px 6%;
+    }
+
+
+    /* Introdução */
+
+    .sobre-introducao h1 {
+        font-size: 24px;
+    }
+
+    .sobre-introducao p,
+    .sobre-texto p {
+        font-size: 15px;
+    }
+
+
+    /* Banner */
+
+    .sobre-banner {
+        margin-top: 28px;
+    }
+
+    .sobre-banner img {
+        height: 210px;
+
+        border-radius: 18px;
+    }
+
+
+    /* Blocos */
+
+    .sobre-bloco {
+        margin-top: 60px;
+    }
+
+    .sobre-texto h2,
+    .como-ajudar h2 {
+        font-size: 23px;
+    }
+
+
+    /* Como podemos ajudar */
+
+    .ajuda-linha,
+    .ajuda-linha.invertida {
+        flex-direction: column;
+
+        gap: 25px;
+
+        margin-bottom: 50px;
+    }
+
+    .ajuda-texto {
+        width: 100%;
+    }
+
+    .ajuda-imagem {
+        width: 100%;
+    }
+
+    .ajuda-imagem img {
+        height: 220px;
+    }
+
+
+    /* Final */
+
+    .sobre-final {
+        margin-top: 60px;
+
+        padding: 35px 20px;
+    }
+
+    .sobre-final h2 {
+        font-size: 24px;
+    }
+}

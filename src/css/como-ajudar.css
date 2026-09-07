@@ -1,0 +1,194 @@
+#como-ajudar {
+    position: relative;
+    overflow: hidden;
+}
+
+.paws-ajuda {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.paws-ajuda .paw {
+    position: absolute;
+
+    color: #5F7F70;
+    opacity: 0.25;
+}
+
+#como-ajudar > *:not(.paws-ajuda) {
+    position: relative;
+    z-index: 1;
+}
+
+#ajuda-container {
+    background-color: #2F453A;
+    border-radius: 32px;
+    border: 5px solid #F4A261;
+    padding: 35px 30px;
+    margin: 25px auto 0;
+    width: 100%;
+    max-width: 950px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+
+    position: relative;
+}
+
+#como-ajudar h3 {
+    color: #F4A261;
+}
+
+#como-ajudar h2 {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1rem;
+    color: #F4A261;
+}
+
+#como-ajudar h1 {
+    font-size: 2.8rem;
+    font-weight: 600;
+    line-height: 3rem;
+    color: #2F453A;
+}
+
+.ajuda-card {
+    background-color: transparent;
+    width: 200px;
+    min-height: 250px;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+}
+
+.ajuda-card h3::after {
+    content: "";
+    display: block;
+    width: 35px;
+    height: 3px;
+    background-color: #F4A261;
+    border-radius: 10px;
+    margin: 8px auto 0;
+}
+
+#como-ajudar .Pajuda {
+    max-width: 700px;
+    margin: 8px auto 15px;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #5F7F70;
+    text-align: center;
+}   
+
+.ajuda-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 260px);
+    justify-content: center;
+    gap: 24px;
+    margin-top: 15px;
+}
+
+.ajuda-card {
+    background-color: transparent;
+
+    width: 200px;
+    min-height: 250px;
+
+    padding: 20px;
+    box-sizing: border-box;
+
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.3s ease;
+}
+
+.ajuda-card span {
+    display: block;
+    margin-top: 15px;
+
+    color: #F4A261;
+    font-size: 0.85rem;
+    font-weight: 600;
+    font-style: italic;
+}
+
+
+.ajuda-icon {
+    width: 70px;
+    height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background-color: #F4A261;
+    color: #FFFFFF;
+
+    font-size: 26px;
+
+    margin-bottom: 18px;
+}
+
+.ajuda-card p {
+    color: #DDE6E0;
+
+    font-size: 0.9rem;
+    line-height: 1.5;
+
+    margin: 0;
+}
+
+.ajuda-final {
+    text-align: center;
+    margin-top: 35px;
+    margin-bottom: 70px;
+}
+
+.ajuda-final h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #2F453A;
+    margin-bottom: 8px;
+}
+
+.ajuda-final p {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #5F7F70;
+}
+
+@media (max-width: 1000px) {
+    .ajuda-cards {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 10px;
+    }
+
+    .ajuda-card {
+        width: 200px;
+        min-height: 250px;
+    }
+}
