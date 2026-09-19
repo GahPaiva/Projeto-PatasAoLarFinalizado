@@ -1,0 +1,197 @@
+/* CONTAINER DA PÁGINA PRINCIPAL */
+#pets-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+
+/* CONTAINER DA PÁGINA DE ADOÇÃO */
+#animais {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* CARD */
+.pet-card {
+    position: relative;
+    height: 390px;
+    border-radius: 25px;
+    overflow: hidden;
+    border: 3px solid #F4A261;
+    background-color: #FFF8F0;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.10);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pet-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+
+/* IMAGEM */
+.pet-card > img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* INFORMAÇÕES */
+.pet-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 45px 20px 20px;
+    box-sizing: border-box;
+    text-align: left;
+    color: white;
+    background: linear-gradient(
+        transparent,
+        rgba(0, 0, 0, 0.75)
+    );
+}
+
+
+/* NOME */
+.pet-info h3 {
+    margin: 0 0 10px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+
+/* DADOS */
+.pet-dados {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    font-size: 13px;
+}
+
+.pet-dados span {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    background-color: rgba(255, 255, 255, 0.18);
+    padding: 5px 8px;
+    border-radius: 8px;
+    color: white;
+    white-space: nowrap;
+}
+
+
+/* BOTÃO */
+.btn-adotar {
+    width: 100%;
+    margin-top: 15px;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    background-color: #F4A261;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-adotar:hover {
+    transform: scale(1.03);
+}
+
+/* CELULAR */
+@media (max-width: 768px) {
+
+    #pets-container,
+    #animais {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        padding: 0 12px;
+        box-sizing: border-box;
+    }
+
+    .pet-card {
+        height: 280px;
+        border-radius: 18px;
+        border-width: 2px;
+    }
+
+    .pet-info {
+        padding: 35px 10px 10px;
+    }
+
+    .pet-info h3 {
+        margin-bottom: 7px;
+        font-size: 18px;
+    }
+
+    .pet-dados {
+        gap: 4px;
+        font-size: 10px;
+    }
+
+    .pet-dados span {
+        padding: 4px 5px;
+        border-radius: 6px;
+    }
+
+    .btn-adotar {
+        margin-top: 8px;
+        padding: 7px;
+        border-radius: 15px;
+        font-size: 12px;
+    }
+}
+
+
+/* CELULARES PEQUENOS */
+@media (max-width: 480px) {
+
+    #pets-container,
+    #animais {
+        gap: 10px;
+        padding: 0 8px;
+    }
+
+    .pet-card {
+        height: 240px;
+        border-radius: 16px;
+    }
+
+    .pet-info {
+        padding: 30px 8px 8px;
+    }
+
+    .pet-info h3 {
+        font-size: 16px;
+    }
+
+    .pet-dados {
+        font-size: 9px;
+        gap: 3px;
+    }
+
+    .pet-dados span {
+        padding: 3px 4px;
+    }
+
+    .btn-adotar {
+        margin-top: 6px;
+        padding: 6px;
+        font-size: 11px;
+    }
+}

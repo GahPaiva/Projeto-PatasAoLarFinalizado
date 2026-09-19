@@ -1,0 +1,585 @@
+/* =========================
+   MODAL
+========================= */
+
+.pet-modal {
+    display: none;
+
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+    box-sizing: border-box;
+
+    background-color: rgba(47, 69, 58, 0.60);
+
+    overflow-y: auto;
+}
+
+
+/* =========================
+   CONTEÚDO
+========================= */
+
+.modal-conteudo {
+    position: relative;
+
+    display: flex;
+    flex-direction: row-reverse;
+
+    width: 100%;
+    max-width: 800px;
+    min-height: 570px;
+
+    background-color: #FFF8F0;
+
+    border: 3px solid #F4A261;
+    border-radius: 25px;
+
+    overflow: hidden;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.20);
+}
+
+
+/* =========================
+   FOTO
+========================= */
+
+.modal-imagem {
+    width: 52%;
+    min-width: 0;
+}
+
+.modal-imagem img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* =========================
+   INFORMAÇÕES
+========================= */
+
+.modal-info {
+    width: 48%;
+    padding: 40px 32px 30px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+
+    text-align: left;
+}
+
+
+/* =========================
+   ONG
+========================= */
+
+.modal-ong {
+    margin: 0 0 8px;
+
+    color: #F4A261;
+
+    font-size: 12px;
+    font-weight: 500;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================
+   NOME
+========================= */
+
+.modal-titulo {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 10px;
+
+    margin-bottom: 15px;
+}
+
+.modal-titulo h2 {
+    margin: 0;
+
+    color: #2F453A;
+
+    font-size: 2rem;
+    font-weight: 500;
+
+    word-break: break-word;
+}
+
+.modal-acoes {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    flex-shrink: 0;
+}
+
+.modal-sexo {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.modal-sexo .fa-mars {
+    color: #1D4FA3;
+}
+
+.modal-sexo .fa-venus {
+    color: #D94F70;
+}
+
+
+/* =========================
+   FAVORITO
+========================= */
+
+.btn-favorito {
+    padding: 5px;
+
+    border: none;
+
+    background: transparent;
+
+    color: #D62828;
+
+    font-size: 24px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.btn-favorito:hover {
+    transform: scale(1.15);
+}
+
+.btn-favorito.ativo {
+    color: #D62828;
+}
+
+
+/* =========================
+   HISTÓRIA
+========================= */
+
+.modal-historia {
+    margin-top: 0;
+}
+
+.modal-historia > span {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #2F453A;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.modal-historia p {
+    margin: 0;
+
+    color: #5F7F70;
+
+    font-size: 13px;
+
+    line-height: 1.45;
+
+    word-break: break-word;
+}
+
+
+/* =========================
+   PERSONALIDADE
+========================= */
+
+.modal-personalidade {
+    margin-top: 12px;
+}
+
+.modal-personalidade > span {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #2F453A;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.personalidade-tags {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 6px;
+}
+
+.personalidade-tags p {
+    margin: 0;
+
+    padding: 5px 10px;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+    font-weight: 500;
+
+    white-space: nowrap;
+}
+
+
+/* CORES DAS PERSONALIDADES */
+
+.personalidade-rosa {
+    background-color: #F8D7DA;
+    color: #A94452;
+}
+
+.personalidade-amarelo {
+    background-color: #FFF0B3;
+    color: #8A6D1D;
+}
+
+.personalidade-azul {
+    background-color: #D6EAF8;
+    color: #35658A;
+}
+
+.personalidade-roxo {
+    background-color: #E5D6F5;
+    color: #704A8A;
+}
+
+
+/* =========================
+   DADOS
+========================= */
+
+.modal-dados {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    column-gap: 25px;
+    row-gap: 15px;
+
+    margin-top: 15px;
+
+    padding: 18px;
+
+    background-color: #F3F7F4;
+
+    border: 1px solid rgba(95, 127, 112, 0.15);
+
+    border-radius: 20px;
+
+    box-sizing: border-box;
+}
+
+.modal-dados div {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 1px;
+
+    min-width: 0;
+}
+
+.modal-dados span {
+    color: #2F453A;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    margin-bottom: 2px;
+}
+
+.modal-dados strong {
+    color: #5F7F70;
+
+    font-size: 14px;
+    font-weight: 400;
+}
+
+
+/* =========================
+   BOTÕES
+========================= */
+
+.modal-botoes {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+
+/* QUERO ADOTAR */
+
+.modal-adotar {
+    flex: 1;
+
+    padding: 15px 18px;
+
+    border: none;
+    border-radius: 12px;
+
+    background-color: #F4A261;
+    color: white;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow: 0 5px 12px rgba(244, 162, 97, 0.25);
+
+    transition: 0.3s;
+}
+
+.modal-adotar:hover {
+    transform: translateY(-3px);
+
+    box-shadow: 0 8px 18px rgba(244, 162, 97, 0.35);
+}
+
+
+/* COMPARTILHAR */
+
+.modal-compartilhar {
+    width: 50px;
+    height: 50px;
+
+    border: 2px solid #5F7F70;
+    border-radius: 12px;
+
+    background-color: transparent;
+    color: #5F7F70;
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.modal-compartilhar:hover {
+    background-color: #5F7F70;
+    color: white;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   FECHAR
+========================= */
+
+.fechar-modal {
+    position: absolute;
+
+    top: 12px;
+    right: 12px;
+
+    z-index: 5;
+
+    width: 34px;
+    height: 34px;
+
+    border: none;
+    border-radius: 50%;
+
+    background-color: #FFF8F0;
+    color: #2F453A;
+
+    font-size: 22px;
+    font-weight: bold;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.fechar-modal:hover {
+    background-color: #F4A261;
+    color: white;
+}
+
+body.modal-aberto header {
+    display: none;
+}
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 768px) {
+
+    .pet-modal {
+        padding: 12px;
+    }
+
+    .modal-conteudo {
+        flex-direction: column;
+
+        width: 100%;
+        max-width: 500px;
+
+        min-height: auto;
+        max-height: 95vh;
+
+        overflow-y: auto;
+
+        border-radius: 20px;
+    }
+
+    .modal-imagem {
+        width: 100%;
+        height: 280px;
+
+        flex-shrink: 0;
+    }
+
+    .modal-info {
+        width: 100%;
+
+        padding: 25px 20px 20px;
+    }
+
+    .modal-titulo h2 {
+        font-size: 1.7rem;
+    }
+
+    .modal-dados {
+        column-gap: 15px;
+        row-gap: 10px;
+
+        padding: 13px;
+    }
+
+    .modal-botoes {
+        padding-top: 15px;
+    }
+}
+
+
+/* =========================
+   CELULAR PEQUENO
+========================= */
+
+@media (max-width: 480px) {
+
+    .pet-modal {
+        padding: 8px;
+    }
+
+    .modal-conteudo {
+        max-height: 96vh;
+
+        border-width: 2px;
+        border-radius: 18px;
+    }
+
+    .modal-imagem {
+        height: 220px;
+    }
+
+    .modal-info {
+        padding: 20px 15px 15px;
+    }
+
+    .modal-ong {
+        font-size: 10px;
+    }
+
+    .modal-titulo h2 {
+        font-size: 1.5rem;
+    }
+
+    .modal-acoes {
+        gap: 8px;
+    }
+
+    .modal-sexo {
+        font-size: 25px;
+    }
+
+    .btn-favorito {
+        font-size: 21px;
+    }
+
+    .modal-historia p {
+        font-size: 12px;
+    }
+
+    .modal-dados {
+        grid-template-columns: 1fr 1fr;
+
+        column-gap: 10px;
+        row-gap: 9px;
+
+        padding: 12px;
+    }
+
+    .modal-dados span {
+        font-size: 10px;
+    }
+
+    .modal-dados strong {
+        font-size: 12px;
+    }
+
+    .personalidade-tags p {
+        padding: 4px 8px;
+
+        font-size: 10px;
+    }
+
+    .modal-adotar {
+        padding: 12px;
+
+        font-size: 14px;
+    }
+
+    .modal-compartilhar {
+        width: 45px;
+        height: 40px;
+    }
+
+    .fechar-modal {
+        top: 8px;
+        right: 8px;
+
+        width: 30px;
+        height: 30px;
+
+        font-size: 19px;
+    }
+}

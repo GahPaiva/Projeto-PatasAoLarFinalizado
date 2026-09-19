@@ -1,0 +1,698 @@
+/* ================================
+   CONFIGURAÇÕES GERAIS
+================================ */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 40px;
+
+    font-family: Arial, sans-serif;
+
+    background-color: #F3F5F2;
+    color: #2F453A;
+}
+
+
+/* ================================
+   CABEÇALHO
+================================ */
+
+.cabecalho-pagina {
+    max-width: 1100px;
+
+    margin: 0 auto 22px;
+}
+
+.cabecalho-pagina h1 {
+    margin: 0;
+
+    color: #2F453A;
+
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.pagina-tag {
+    display: inline-block;
+
+    margin-bottom: 7px;
+
+    color: #5F7F70;
+
+    font-size: 0.74rem;
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+}
+
+.cabecalho-pagina p {
+    margin: 7px 0 0;
+
+    color: #6A7B71;
+
+    font-size: 0.92rem;
+}
+
+
+/* ================================
+   CONTAINER
+================================ */
+
+.formulario-container {
+    width: 100%;
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding: 35px 38px;
+
+    background-color: #FFF8F0;
+
+    border: 1px solid #D7DED8;
+    border-left: 5px solid #5F7F70;
+
+    border-radius: 8px;
+
+    box-shadow:
+        0 10px 28px rgba(47, 69, 58, 0.08);
+}
+
+
+/* ================================
+   FORMULÁRIO
+================================ */
+
+#form-pet {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    column-gap: 24px;
+
+    row-gap: 20px;
+}
+
+
+/* ================================
+   CAMPOS
+================================ */
+
+.campo {
+    margin: 0;
+
+    min-width: 0;
+}
+
+
+.campo label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #2F453A;
+
+    font-size: 0.86rem;
+    font-weight: 700;
+}
+
+
+/* ================================
+   INPUTS
+================================ */
+
+.campo input,
+.campo select,
+.campo textarea {
+    width: 100%;
+
+    min-height: 46px;
+
+    padding: 10px 12px;
+
+    border: 1px solid #C7D1CA;
+    border-radius: 6px;
+
+    background-color: #FFFFFF;
+
+    color: #2F453A;
+
+    font-family: inherit;
+    font-size: 14px;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s,
+        box-shadow 0.2s,
+        background-color 0.2s;
+}
+
+
+.campo input:hover,
+.campo select:hover,
+.campo textarea:hover {
+    border-color: #8FA59A;
+}
+
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+    border-color: #5F7F70;
+
+    box-shadow:
+        0 0 0 3px rgba(95, 127, 112, 0.10);
+}
+
+
+/* ================================
+   FOTO
+================================ */
+
+#foto {
+    padding: 8px;
+
+    background-color: #F7F9F7;
+
+    cursor: pointer;
+}
+
+
+/* ================================
+   DESCRIÇÃO
+================================ */
+
+#descricao {
+    min-height: 150px;
+
+    resize: vertical;
+
+    line-height: 1.6;
+}
+
+
+/* ================================
+   CAMPOS QUE OCUPAM A LINHA TODA
+================================ */
+
+.campo:nth-last-of-type(3),
+.campo:nth-last-of-type(2),
+.campo:nth-last-of-type(1) {
+    grid-column: 1 / -1;
+}
+
+
+/* ================================
+   TEXTO AUXILIAR
+================================ */
+
+.personalidade-info {
+    margin: -1px 0 11px;
+
+    color: #6A7B71;
+
+    font-size: 13px;
+
+    line-height: 1.45;
+}
+
+
+/* ================================
+   CONVIVÊNCIA / PERSONALIDADE
+================================ */
+
+.personalidades {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 9px;
+}
+
+
+.personalidade {
+    position: relative;
+
+    min-width: 0;
+}
+
+
+.personalidade input {
+    position: absolute;
+
+    opacity: 0;
+
+    pointer-events: none;
+}
+
+
+.personalidade label {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+
+    min-height: 44px;
+
+    margin: 0;
+
+    padding: 8px 10px;
+
+    border: 1px solid #C7D1CA;
+    border-radius: 6px;
+
+    background-color: #FFFFFF;
+
+    color: #2F453A;
+
+    font-size: 0.82rem;
+    font-weight: 600;
+
+    text-align: center;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s,
+        border-color 0.2s,
+        color 0.2s,
+        transform 0.2s;
+}
+
+
+.personalidade label:hover {
+    background-color: #F2F6F3;
+
+    border-color: #5F7F70;
+
+    transform: translateY(-1px);
+}
+
+
+.personalidade input:checked + label {
+    background-color: #5F7F70;
+
+    border-color: #5F7F70;
+
+    color: #FFFFFF;
+}
+
+
+/* ================================
+   DESCRIÇÃO EM LARGURA COMPLETA
+================================ */
+
+.campo:has(#descricao) {
+    grid-column: 1 / -1;
+}
+
+
+/* ================================
+   FOTO EM LARGURA COMPLETA
+================================ */
+
+.campo:has(#foto) {
+    grid-column: 1 / -1;
+}
+
+
+/* ================================
+   CONVIVÊNCIA
+================================ */
+
+.campo:has(input[name="convivencia"]) {
+    grid-column: 1 / -1;
+}
+
+
+/* ================================
+   PERSONALIDADE
+================================ */
+
+.campo:has(input[name="personalidade"]) {
+    grid-column: 1 / -1;
+}
+
+
+/* ================================
+   BOTÃO
+================================ */
+
+.btn-cadastrar {
+    grid-column: 1 / -1;
+
+    width: 100%;
+
+    min-height: 48px;
+
+    margin-top: 4px;
+
+    padding: 0 18px;
+
+    border: none;
+    border-radius: 6px;
+
+    background-color: #2F453A;
+
+    color: #FFF8F0;
+
+    font-size: 0.95rem;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s,
+        transform 0.2s;
+}
+
+
+.btn-cadastrar:hover {
+    background-color: #405B4C;
+
+    transform: translateY(-1px);
+}
+
+
+.btn-cadastrar:active {
+    transform: translateY(0);
+}
+
+
+/* ================================
+   SEPARAÇÃO DOS BLOCOS
+================================ */
+
+.campo:has(input[name="convivencia"]),
+.campo:has(input[name="personalidade"]),
+.campo:has(#descricao) {
+    padding-top: 5px;
+
+    border-top: 1px solid #E1E7E2;
+}
+
+
+
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 900px) {
+
+    body {
+        padding: 28px 20px;
+    }
+
+    .formulario-container {
+        padding: 30px;
+    }
+
+    .personalidades {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+/* ================================
+   CELULAR
+================================ */
+
+@media (max-width: 650px) {
+
+    body {
+        padding: 18px 12px;
+    }
+
+    .cabecalho-pagina h1 {
+        font-size: 1.7rem;
+    }
+
+    .formulario-container {
+        padding: 24px 18px;
+
+        border-left-width: 4px;
+    }
+
+    #form-pet {
+        grid-template-columns: 1fr;
+
+        row-gap: 18px;
+    }
+
+    .campo,
+    .campo:has(#foto),
+    .campo:has(input[name="convivencia"]),
+    .campo:has(input[name="personalidade"]),
+    .campo:has(#descricao),
+    .btn-cadastrar {
+        grid-column: 1 / -1;
+    }
+
+    .personalidades {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* ================================
+   CELULAR PEQUENO
+================================ */
+
+@media (max-width: 420px) {
+
+    .formulario-container {
+        padding: 20px 14px;
+    }
+
+    .campo input,
+    .campo select,
+    .campo textarea {
+        font-size: 14px;
+    }
+
+    .personalidade label {
+        min-height: 44px;
+    }
+
+}
+
+/* ================================
+   MODAL DE SUCESSO
+================================ */
+
+.modal-sucesso {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    background-color: rgba(47, 69, 58, 0.45);
+    backdrop-filter: blur(3px);
+}
+
+
+/* ================================
+   CONTEÚDO
+================================ */
+
+.modal-sucesso-conteudo {
+    width: 100%;
+    max-width: 420px;
+
+    padding: 38px 35px;
+
+    background-color: #FFF8F0;
+
+    border: 2px solid #F4A261;
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 20px 50px rgba(47, 69, 58, 0.18);
+
+    text-align: center;
+
+    animation: aparecerSucesso 0.25s ease;
+}
+
+
+/* ================================
+   ÍCONE
+================================ */
+
+.icone-sucesso {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 68px;
+    height: 68px;
+
+    margin: 0 auto 20px;
+
+    border-radius: 50%;
+
+    background-color: #5F7F70;
+
+    color: #FFFFFF;
+
+    font-size: 28px;
+
+    animation: aparecerIcone 0.35s ease;
+}
+
+
+/* ================================
+   TÍTULO
+================================ */
+
+.modal-sucesso-conteudo h2 {
+    margin: 0 0 10px;
+
+    color: #2F453A;
+
+    font-size: 1.55rem;
+}
+
+
+/* ================================
+   TEXTO
+================================ */
+
+.modal-sucesso-conteudo p {
+    margin: 0 auto 25px;
+
+    max-width: 320px;
+
+    color: #6A7B71;
+
+    font-size: 0.92rem;
+
+    line-height: 1.6;
+}
+
+
+/* ================================
+   BOTÃO
+================================ */
+
+#fechar-sucesso {
+    width: 100%;
+
+    min-height: 46px;
+
+    border: none;
+    border-radius: 7px;
+
+    background-color: #2F453A;
+
+    color: #FFF8F0;
+
+    font-size: 0.92rem;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s,
+        transform 0.2s;
+}
+
+
+#fechar-sucesso:hover {
+    background-color: #405B4C;
+
+    transform: translateY(-1px);
+}
+
+
+#fechar-sucesso:active {
+    transform: translateY(0);
+}
+
+
+/* ================================
+   ANIMAÇÕES
+================================ */
+
+@keyframes aparecerSucesso {
+
+    from {
+        opacity: 0;
+
+        transform: translateY(10px) scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0) scale(1);
+    }
+
+}
+
+
+@keyframes aparecerIcone {
+
+    from {
+        opacity: 0;
+
+        transform: scale(0.7);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: scale(1);
+    }
+
+}
+
+
+/* ================================
+   CELULAR
+================================ */
+
+@media (max-width: 650px) {
+
+    .modal-sucesso {
+        padding: 16px;
+    }
+
+    .modal-sucesso-conteudo {
+        padding: 32px 24px;
+
+        border-radius: 14px;
+    }
+
+    .icone-sucesso {
+        width: 60px;
+        height: 60px;
+
+        font-size: 24px;
+    }
+
+    .modal-sucesso-conteudo h2 {
+        font-size: 1.4rem;
+    }
+
+}

@@ -1,0 +1,652 @@
+/* ================================
+   CABEÇALHO
+================================ */
+
+.cabecalho-animais {
+  display: flex;
+
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 25px;
+
+  margin-bottom: 25px;
+}
+
+.pagina-tag {
+  display: inline-block;
+
+  margin-bottom: 8px;
+
+  color: #f4a261;
+
+  font-size: 0.75rem;
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+}
+
+.cabecalho-animais h1 {
+  margin: 0;
+
+  color: #2f453a;
+
+  font-size: 2.2rem;
+}
+
+.cabecalho-animais p {
+  margin: 8px 0 0;
+
+  color: #5f7f70;
+
+  line-height: 1.5;
+}
+
+/* ================================
+   BOTÃO CADASTRAR
+================================ */
+
+.btn-cadastrar {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  min-height: 46px;
+
+  padding: 0 18px;
+
+  border: 1px solid #f4a261;
+  border-radius: 7px;
+
+  background-color: #f4a261;
+
+  color: #fff8f0;
+
+  font-weight: 700;
+
+  text-decoration: none;
+
+  transition: 0.2s;
+}
+
+.btn-cadastrar:hover {
+  background-color: #e89450;
+
+  border-color: #e89450;
+
+  transform: translateY(-2px);
+}
+
+/* ================================
+   CONTADOR
+================================ */
+
+.contador-animais {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  margin-bottom: 22px;
+
+  padding: 10px 15px;
+
+  border: 1px solid #c9d5cc;
+  border-radius: 7px;
+
+  background-color: #fff8f0;
+
+  color: #5f7f70;
+
+  font-size: 0.9rem;
+
+  box-shadow: 0 3px 10px rgba(47, 69, 58, 0.04);
+}
+
+.contador-animais i {
+  color: #f4a261;
+}
+
+/* ================================
+   GRID
+================================ */
+
+.lista-animais {
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 20px;
+}
+
+/* ================================
+   CARD
+================================ */
+
+.admin-pet-card {
+  display: flex;
+  align-items: stretch;
+  gap: 12px;
+  min-height: 180px;
+  padding: 7px;
+  overflow: hidden;
+  background-color: #fff8f0;
+  border: 1px solid #c9d5cc;
+  border-radius: 9px;
+  box-shadow: 0 5px 16px rgba(47, 69, 58, 0.06);
+  transition:
+    border-color 0.2s,
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+
+.admin-pet-card:hover {
+  border-color: #5f7f70;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 22px rgba(47, 69, 58, 0.1);
+}
+
+/* ================================
+   IMAGEM
+================================ */
+
+.admin-pet-imagem {
+  width: 56%;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 7px;
+  background-color: #f7f1e8;
+}
+
+.admin-pet-imagem img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 7px;
+}
+
+/* ================================
+   LADO DIREITO
+================================ */
+
+.admin-pet-lateral {
+  position: relative;
+
+  z-index: 10;
+
+  flex: 1;
+
+  display: flex;
+
+  flex-direction: column;
+
+  padding: 7px 3px;
+
+  min-width: 0;
+}
+
+.admin-pet-lateral h3 {
+  margin: 0 0 12px;
+
+  color: #2f453a;
+
+  font-size: 1.1rem;
+
+  font-weight: 700;
+}
+
+/* ================================
+   BOTÕES DE AÇÃO
+================================ */
+
+.admin-pet-acoes {
+  position: relative;
+
+  z-index: 20;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 6px;
+}
+
+.admin-pet-acoes button {
+  position: relative;
+
+  z-index: 30;
+
+  width: 100%;
+
+  min-height: 32px;
+
+  padding: 0 6px;
+
+  border: 1px solid transparent;
+
+  border-radius: 6px;
+
+  font-size: 0.72rem;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  pointer-events: auto;
+
+  transition:
+    background-color 0.2s,
+    border-color 0.2s,
+    transform 0.2s;
+}
+
+.admin-pet-acoes button:hover {
+  transform: translateY(-1px);
+}
+
+/* ================================
+   VISUALIZAR
+================================ */
+
+.btn-ver {
+  background-color: #d9e3da;
+
+  border-color: #c3d1c7;
+
+  color: #2f453a;
+}
+
+.btn-ver:hover {
+  background-color: #c9d8cd;
+
+  border-color: #afc1b5;
+}
+
+/* ================================
+   EDITAR
+================================ */
+
+.btn-editar {
+  background-color: #f4a261;
+
+  border-color: #f4a261;
+
+  color: #fff8f0;
+}
+
+.btn-editar:hover {
+  background-color: #e89450;
+
+  border-color: #e89450;
+}
+
+/* ================================
+   EXCLUIR
+================================ */
+
+.btn-excluir {
+  background-color: #d96c5f;
+
+  border-color: #d96c5f;
+
+  color: #fff8f0;
+}
+
+.btn-excluir:hover {
+  background-color: #c85b4f;
+
+  border-color: #c85b4f;
+}
+
+/* ================================
+   SEM ANIMAIS
+================================ */
+
+.sem-animais {
+  text-align: center;
+
+  padding: 60px 20px;
+
+  border: 1px dashed #c9d5cc;
+
+  border-radius: 12px;
+
+  background-color: #fff8f0;
+}
+
+.sem-animais i {
+  margin-bottom: 15px;
+
+  color: #f4a261;
+
+  font-size: 2.5rem;
+}
+
+.sem-animais h2 {
+  margin: 0 0 8px;
+
+  color: #2f453a;
+
+  font-size: 1.4rem;
+}
+
+.sem-animais p {
+  margin: 0 0 20px;
+
+  color: #5f7f70;
+}
+
+.btn-cadastrar-vazio {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-height: 42px;
+
+  padding: 0 18px;
+
+  border-radius: 7px;
+
+  background-color: #f4a261;
+
+  color: #fff8f0;
+
+  font-weight: 700;
+
+  text-decoration: none;
+
+  transition: 0.2s;
+}
+
+.btn-cadastrar-vazio:hover {
+  background-color: #e89450;
+
+  transform: translateY(-2px);
+}
+
+/* ================================
+   RESPONSIVO
+================================ */
+
+@media (max-width: 1100px) {
+  .lista-animais {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .cabecalho-animais {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 15px;
+  }
+
+  .cabecalho-animais h1 {
+    font-size: 1.8rem;
+  }
+
+  .btn-cadastrar {
+    width: 100%;
+  }
+
+  .lista-animais {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 10px;
+  }
+
+  .admin-pet-card {
+    min-height: 165px;
+
+    gap: 8px;
+
+    padding: 6px;
+  }
+
+  .admin-pet-imagem {
+    width: 55%;
+
+    height: 125px;
+  }
+
+  .admin-pet-lateral {
+    padding: 5px 2px;
+  }
+
+  .admin-pet-lateral h3 {
+    margin-bottom: 9px;
+
+    font-size: 0.95rem;
+  }
+
+  .admin-pet-acoes {
+    gap: 5px;
+  }
+
+  .admin-pet-acoes button {
+    min-height: 29px;
+
+    padding: 0 4px;
+
+    font-size: 0.62rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .lista-animais {
+    gap: 8px;
+  }
+
+  .admin-pet-card {
+    gap: 6px;
+
+    padding: 5px;
+  }
+
+  .admin-pet-imagem {
+    width: 53%;
+
+    height: 115px;
+  }
+
+  .admin-pet-lateral h3 {
+    font-size: 0.85rem;
+  }
+
+  .admin-pet-acoes button {
+    min-height: 27px;
+
+    font-size: 0.58rem;
+  }
+}
+
+/* ================================
+   MODAIS
+================================ */
+
+.modal-overlay {
+  position: fixed !important;
+
+  inset: 0 !important;
+
+  z-index: 99999 !important;
+
+  display: none;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  background-color: rgba(47, 69, 58, 0.55);
+}
+
+.modal-box {
+  position: relative;
+
+  z-index: 100000;
+
+  width: min(420px, 100%);
+
+  padding: 28px;
+
+  background-color: #fff8f0;
+
+  border: 2px solid #f4a261;
+
+  border-radius: 14px;
+
+  box-shadow: 0 20px 50px rgba(47, 69, 58, 0.25);
+
+  text-align: center;
+}
+
+.modal-icone {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 55px;
+  height: 55px;
+
+  margin: 0 auto 15px;
+
+  border-radius: 50%;
+
+  font-size: 22px;
+}
+
+.excluir-icone {
+  background-color: #f9d9d5;
+
+  color: #d96c5f;
+}
+
+.mensagem-icone {
+  background-color: #d9e3da;
+
+  color: #2f453a;
+}
+
+.modal-box h2 {
+  margin: 0 0 10px;
+
+  color: #2f453a;
+
+  font-size: 1.4rem;
+}
+
+.modal-box p {
+  margin: 0 0 22px;
+
+  color: #5f7f70;
+
+  line-height: 1.5;
+}
+
+.modal-acoes {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 10px;
+}
+
+.modal-btn {
+  min-height: 40px;
+
+  padding: 0 18px;
+
+  border: 1px solid transparent;
+
+  border-radius: 7px;
+
+  font-size: 0.85rem;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.modal-btn-cancelar {
+  background-color: #e5e9e5;
+
+  border-color: #d0d8d1;
+
+  color: #2f453a;
+}
+
+.modal-btn-cancelar:hover {
+  background-color: #d9e0da;
+}
+
+.modal-btn-excluir {
+  background-color: #d96c5f;
+
+  border-color: #d96c5f;
+
+  color: #fff8f0;
+}
+
+.modal-btn-excluir:hover {
+  background-color: #c85b4f;
+
+  border-color: #c85b4f;
+}
+
+.modal-btn-ok {
+  width: 100%;
+
+  background-color: #f4a261;
+
+  border-color: #f4a261;
+
+  color: #fff8f0;
+}
+
+.modal-btn-ok:hover {
+  background-color: #e89450;
+}
+
+.modal-mensagem-box {
+  max-width: 400px;
+}
+
+/* ================================
+   RESPONSIVO DOS MODAIS
+================================ */
+
+@media (max-width: 500px) {
+  .modal-overlay {
+    padding: 15px;
+  }
+
+  .modal-box {
+    padding: 22px 18px;
+
+    border-radius: 12px;
+  }
+
+  .modal-acoes {
+    flex-direction: column;
+  }
+
+  .modal-btn {
+    width: 100%;
+  }
+}

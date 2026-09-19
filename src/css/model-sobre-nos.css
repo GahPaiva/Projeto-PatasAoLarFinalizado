@@ -1,0 +1,97 @@
+/* =========================
+   MODAL SOBRE NÓS
+========================= */
+
+#sobre-modal {
+    display: none;
+
+    position: fixed;
+    inset: 0;
+
+    z-index: 10000;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+    box-sizing: border-box;
+
+    background-color: rgba(47, 69, 58, 0.60);
+}
+
+
+/* =========================
+   CONTAINER
+========================= */
+
+#sobre-container {
+    position: relative;
+
+    width: 90%;
+    max-width: 1000px;
+
+    height: 85vh;
+    max-height: 800px;
+
+    background-color: #FFF8F0;
+
+    border: 3px solid #F4A261;
+    border-radius: 25px;
+
+    overflow: hidden;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.20);
+}
+
+
+/* =========================
+   IFRAME
+========================= */
+
+#sobre-iframe {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    border: none;
+}
+
+
+/* =========================
+   BOTÃO FECHAR
+========================= */
+
+#fechar-sobre {
+    position: absolute;
+
+    top: 12px;
+    right: 12px;
+
+    z-index: 20;
+
+    width: 36px;
+    height: 36px;
+
+    border: none;
+    border-radius: 50%;
+
+    background-color: #FFF8F0;
+    color: #2F453A;
+
+    font-size: 23px;
+    font-weight: bold;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+#fechar-sobre:hover {
+    background-color: #F4A261;
+    color: white;
+}

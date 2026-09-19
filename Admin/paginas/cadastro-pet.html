@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/Admin/admin-css/admin.css">
+    <link rel="stylesheet" href="/Admin/admin-css/sidebar.css">
+    <link rel="stylesheet" href="/Admin/admin-css/cadastro-pet.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+
+    <script>
+        if (sessionStorage.getItem("adminLogado") !== "true") {
+            window.location.href = "http://127.0.0.1:5500/Admin/login.html";
+        }
+    </script>
+
+    <title>Cadastrar Pet | Patas ao Lar</title>
+</head>
+
+<body>
+
+    <!-- ================================
+         MENU LATERAL
+    ================================= -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+
+            <img src="../../src/images/Logo.png" alt="Patas ao Lar">
+
+            <div class="sidebar-logo-text">
+                <h2>Patas ao Lar</h2>
+                <span>Painel Administrativo</span>
+            </div>
+
+        </div>
+
+
+        <nav class="menu">
+
+            <a href="inicio.html">
+                <i class="fa-solid fa-house"></i>
+                <span>Início</span>
+            </a>
+
+            <a href="animais.html">
+                <i class="fa-solid fa-paw"></i>
+                <span>Animais</span>
+            </a>
+
+            <a href="cadastro-pet.html" class="menu-ativo">
+                <i class="fa-solid fa-plus"></i>
+                <span>Cadastrar Pet</span>
+            </a>
+
+            <a href="editar-pet.html">
+                <i class="fa-solid fa-pen"></i>
+                <span>Editar Pet</span>
+            </a>
+
+        </nav>
+
+
+        <div class="menu-final">
+
+            <a href="../../index.html">
+                <i class="fa-solid fa-globe"></i>
+                <span>Ver site</span>
+            </a>
+
+            <a href="../login.html">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <span>Sair</span>
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ================================
+         CONTEÚDO
+    ================================= -->
+
+    <main class="conteudo-admin">
+
+        <div class="cabecalho-pagina">
+
+            <span class="pagina-tag">
+                GERENCIAMENTO
+            </span>
+
+            <h1>Cadastrar Pet</h1>
+
+            <p>
+                Cadastre um novo animal disponível para adoção.
+            </p>
+
+        </div>
+
+
+        <div class="formulario-container">
+
+            <form id="form-pet">
+
+                <!-- FOTO -->
+
+                <div class="campo">
+
+                    <label for="foto">
+                        Foto do pet
+                    </label>
+
+                    <input type="file" id="foto" class="foto-input" accept="image/*" required>
+
+                </div>
+
+                <!-- NOME -->
+
+                <div class="campo">
+
+                    <label for="nome">
+                        Nome
+                    </label>
+
+                    <input type="text" id="nome" placeholder="Nome do pet" required>
+
+                </div>
+
+                <!-- ESPÉCIE -->
+
+                <div class="campo">
+
+                    <label for="especie">
+                        Espécie
+                    </label>
+
+                    <select id="especie" required>
+
+                        <option value="">
+                            Selecione
+                        </option>
+
+                        <option value="Cachorro">
+                            Cachorro
+                        </option>
+
+                        <option value="Gato">
+                            Gato
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- IDADE -->
+
+                <div class="campo">
+
+                    <label for="idade">
+                        Idade
+                    </label>
+
+                    <input type="text" id="idade" placeholder="Ex: 2 anos" required>
+
+                </div>
+
+
+                <!-- FASE -->
+
+                <div class="campo">
+
+                    <label for="fase">
+                        Fase da vida
+                    </label>
+
+                    <select id="fase" required>
+
+                        <option value="">
+                            Selecione
+                        </option>
+
+                        <option value="Filhote">
+                            Filhote
+                        </option>
+
+                        <option value="Adulto">
+                            Adulto
+                        </option>
+
+                        <option value="Idoso">
+                            Idoso
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- RAÇA -->
+
+                <div class="campo">
+
+                    <label for="raca">
+                        Raça
+                    </label>
+
+                    <input type="text" id="raca" placeholder="Ex: SRD (Sem Raça Definida)" required>
+
+                </div>
+
+
+                <!-- SEXO -->
+
+                <div class="campo">
+
+                    <label for="sexo">
+                        Sexo
+                    </label>
+
+                    <select id="sexo" required>
+
+                        <option value="">
+                            Selecione
+                        </option>
+
+                        <option value="Macho">
+                            Macho
+                        </option>
+
+                        <option value="Fêmea">
+                            Fêmea
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- PORTE -->
+
+                <div class="campo">
+
+                    <label for="porte">
+                        Porte
+                    </label>
+
+                    <select id="porte" required>
+
+                        <option value="">
+                            Selecione
+                        </option>
+
+                        <option value="Pequeno">
+                            Pequeno
+                        </option>
+
+                        <option value="Médio">
+                            Médio
+                        </option>
+
+                        <option value="Grande">
+                            Grande
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- CASTRADO -->
+
+                <div class="campo">
+
+                    <label for="castrado">
+                        Castrado
+                    </label>
+
+                    <select id="castrado" required>
+
+                        <option value="">
+                            Selecione
+                        </option>
+
+                        <option value="Sim">
+                            Sim
+                        </option>
+
+                        <option value="Não">
+                            Não
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- VACINADO -->
+
+                <div class="campo">
+
+                    <label for="vacinado">
+                        Vacinado
+                    </label>
+
+                    <select id="vacinado" required>
+
+                        <option value="">
+                            Selecione
+                        </option>
+
+                        <option value="Sim">
+                            Sim
+                        </option>
+
+                        <option value="Não">
+                            Não
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- PELAGEM -->
+
+                <div class="campo">
+
+                    <label for="pelagem">
+                        Pelagem
+                    </label>
+
+                    <input type="text" id="pelagem" placeholder="Ex: Preta e branca" required>
+
+                </div>
+
+
+                <!-- CONVIVÊNCIA -->
+
+                <div class="campo">
+
+                    <label>
+                        Convivência
+                    </label>
+
+                    <p class="personalidade-info">
+                        Selecione com quem o pet convive bem.
+                    </p>
+
+                    <div class="personalidades">
+
+                        <div class="personalidade">
+
+                            <input type="checkbox" id="convive-caes" name="convivencia" value="Cães">
+
+                            <label for="convive-caes">
+                                🐶 Cães
+                            </label>
+
+                        </div>
+
+
+                        <div class="personalidade">
+
+                            <input type="checkbox" id="convive-gatos" name="convivencia" value="Gatos">
+
+                            <label for="convive-gatos">
+                                🐱 Gatos
+                            </label>
+
+                        </div>
+
+
+                        <div class="personalidade">
+
+                            <input type="checkbox" id="convive-criancas" name="convivencia" value="Crianças">
+
+                            <label for="convive-criancas">
+                                👧 Crianças
+                            </label>
+
+                        </div>
+
+
+                        <div class="personalidade">
+
+                            <input type="checkbox" id="convive-outros" name="convivencia" value="Outros animais">
+
+                            <label for="convive-outros">
+                                🐾 Outros animais
+                            </label>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PERSONALIDADE -->
+
+                <div class="campo">
+
+                    <label>
+                        Personalidade
+                    </label>
+
+                    <p class="personalidade-info">
+                        Escolha até 4 características.
+                    </p>
+
+                    <div class="personalidades">
+
+                        <div class="personalidade">
+
+                            <input type="checkbox" id="carinhoso" name="personalidade" value="Carinhoso">
+
+                            <label for="carinhoso">
+                                🥰 Carinhoso
+                            </label>
+
+                        </div>
+
+
+                        <div class="personalidade">
+
+                            <input type="checkbox" id="brincalhao" name="personalidade" value="Brincalhão">
+
+                            <label for="brincalhao">
+                                🎾 Brincalhão
+                            </label>
+
+                        </div>
+
+
+                        <div class="personalidade">
+
+                            <input type="checkbox" id="calmo" name="personalidade" value="Calmo">
+
+                            <label for="calmo">
+                                😴 Calmo
+                            </label>
+
+                        </div>
+
+
+                        <div class="personalidade">
+
+                            <input type="checkbox" id="ativo" name="personalidade" value="Ativo">
+
+                            <label for="ativo">
+                                ⚡ Ativo
+                            </label>
+
+                        </div>
+
+
+                        <div class="personalidade">
+
+                            <input type="checkbox" id="sociavel" name="personalidade" value="Sociável">
+
+                            <label for="sociavel">
+                                🤗 Sociável
+                            </label>
+
+                        </div>
+
+
+                        <div class="personalidade">
+
+                            <input type="checkbox" id="companheiro" name="personalidade" value="Companheiro">
+
+                            <label for="companheiro">
+                                ❤️ Companheiro
+                            </label>
+
+                        </div>
+
+
+                        <div class="personalidade">
+
+                            <input type="checkbox" id="tranquilo" name="personalidade" value="Tranquilo">
+
+                            <label for="tranquilo">
+                                😌 Tranquilo
+                            </label>
+
+                        </div>
+
+
+                        <div class="personalidade">
+
+                            <input type="checkbox" id="protetor" name="personalidade" value="Protetor">
+
+                            <label for="protetor">
+                                🛡️ Protetor
+                            </label>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- DESCRIÇÃO -->
+
+                <div class="campo">
+
+                    <label for="descricao">
+                        Sobre o pet
+                    </label>
+
+                    <textarea id="descricao"
+                        placeholder="Conte um pouco sobre a personalidade, comportamento e características do pet..."
+                        required></textarea>
+
+                </div>
+
+
+                <!-- BOTÃO -->
+
+                <button type="submit" class="btn-cadastrar">
+                    Cadastrar Pet
+                </button>
+
+            </form>
+
+        </div>
+
+    </main>
+
+    <!-- ================================
+     MODAL DE SUCESSO
+================================= -->
+
+    <div id="modal-sucesso" class="modal-sucesso">
+
+        <div class="modal-sucesso-conteudo">
+
+            <div class="icone-sucesso">
+                <i class="fa-solid fa-check"></i>
+            </div>
+
+            <h2>Pet cadastrado!</h2>
+
+            <p>
+                O pet foi cadastrado com sucesso
+                e já está disponível para adoção.
+            </p>
+
+            <button type="button" id="fechar-sucesso">
+                Continuar
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script src="/Admin/admin-js/admin.js"></script>
+    <script src="/Admin/admin-js/cadastro-pet.js"></script>
+
+</body>
+
+</html>

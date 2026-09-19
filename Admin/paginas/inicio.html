@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/Admin/admin-css/admin.css">
+    <link rel="stylesheet" href="/Admin/admin-css/sidebar.css">
+    <link rel="stylesheet" href="/Admin/admin-css/inicio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+
+    <script>
+        if (sessionStorage.getItem("adminLogado") !== "true") {
+            window.location.href = "http://127.0.0.1:5500/Admin/login.html";
+        }
+    </script>
+
+    <title>Início | Patas ao Lar</title>
+</head>
+
+<body>
+
+    <!-- MENU LATERAL -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+
+            <img src="/src/images/Logo.png" alt="Patas ao Lar">
+
+            <div class="sidebar-logo-text">
+
+                <h2>Patas ao Lar</h2>
+
+                <span>Painel Administrativo</span>
+
+            </div>
+
+        </div>
+
+
+        <nav class="menu">
+
+            <a href="inicio.html" class="menu-ativo">
+                <i class="fa-solid fa-house"></i>
+                <span>Início</span>
+            </a>
+
+            <a href="animais.html">
+                <i class="fa-solid fa-paw"></i>
+                <span>Animais</span>
+            </a>
+
+            <a href="cadastro-pet.html">
+                <i class="fa-solid fa-plus"></i>
+                <span>Cadastrar Pet</span>
+            </a>
+
+            <a href="editar-pet.html">
+                <i class="fa-solid fa-pen"></i>
+                <span>Editar Pet</span>
+            </a>
+
+        </nav>
+
+
+        <div class="menu-final">
+
+            <a href="../../index.html">
+                <i class="fa-solid fa-globe"></i>
+                <span>Ver site</span>
+            </a>
+
+            <a href="../login.html">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <span>Sair</span>
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- CONTEÚDO -->
+
+    <main class="conteudo-admin">
+
+        <section class="inicio-principal">
+
+            <div class="inicio-principal-texto">
+
+                <span class="inicio-tag">
+                    PAINEL ADMINISTRATIVO
+                </span>
+
+                <h1>
+                    Bem-vindo ao
+                    <strong>Patas ao Lar</strong>
+                </h1>
+
+                <p>
+                    Gerencie os animais cadastrados no sistema,
+                    atualize suas informações e mantenha o
+                    conteúdo do site organizado.
+                </p>
+
+            </div>
+
+
+            <div class="inicio-principal-logo">
+
+                <img src="../../src/images/Logo.png" alt="Patas ao Lar">
+
+            </div>
+
+        </section>
+
+
+        <section class="atalhos">
+
+            <div class="atalhos-cabecalho">
+
+                <div>
+
+                    <span class="secao-tag">
+                        GERENCIAMENTO
+                    </span>
+
+                    <h2>Ações rápidas</h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="atalhos-grid">
+
+                <a href="animais.html" class="atalho-card">
+
+                    <div class="atalho-icone">
+
+                        <i class="fa-solid fa-paw"></i>
+
+                    </div>
+
+                    <div class="atalho-conteudo">
+
+                        <h3>Animais</h3>
+
+                        <p>
+                            Consulte os animais cadastrados
+                            no sistema.
+                        </p>
+
+                    </div>
+
+                    <i class="fa-solid fa-arrow-right atalho-seta"></i>
+
+                </a>
+
+
+                <a href="cadastro-pet.html" class="atalho-card">
+
+                    <div class="atalho-icone">
+
+                        <i class="fa-solid fa-plus"></i>
+
+                    </div>
+
+                    <div class="atalho-conteudo">
+
+                        <h3>Novo cadastro</h3>
+
+                        <p>
+                            Adicione um novo animal ao sistema.
+                        </p>
+
+                    </div>
+
+                    <i class="fa-solid fa-arrow-right atalho-seta"></i>
+
+                </a>
+
+
+                <a href="editar-pet.html" class="atalho-card">
+
+                    <div class="atalho-icone">
+
+                        <i class="fa-solid fa-pen"></i>
+
+                    </div>
+
+                    <div class="atalho-conteudo">
+
+                        <h3>Editar informações</h3>
+
+                        <p>
+                            Atualize os dados de um animal.
+                        </p>
+
+                    </div>
+
+                    <i class="fa-solid fa-arrow-right atalho-seta"></i>
+
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="/Admin/admin-js/admin.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/Admin/admin-css/admin.css">
+    <link rel="stylesheet" href="/Admin/admin-css/login.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+
+    <title>Patas ao Lar | Login</title>
+
+</head>
+
+<body>
+
+    <main class="login-container">
+
+        <section class="login-card">
+
+            <div class="login-logo">
+
+                <img src="../src/images/Logo.png" alt="Patas ao Lar">
+
+            </div>
+
+
+            <h1>Patas ao Lar</h1>
+
+            <p class="login-subtitulo">
+                Painel Administrativo
+            </p>
+
+
+            <form id="form-login">
+
+                <!-- USUÁRIO -->
+
+                <div class="campo-login">
+
+                    <label for="usuario">
+                        Usuário
+                    </label>
+
+                    <div class="input-container">
+
+                        <i class="fa-solid fa-user"></i>
+
+                        <input
+                            type="text"
+                            id="usuario"
+                            placeholder="Digite seu usuário"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- SENHA -->
+
+                <div class="campo-login">
+
+                    <label for="senha">
+                        Senha
+                    </label>
+
+                    <div class="input-container">
+
+                        <i class="fa-solid fa-lock"></i>
+
+                        <input
+                            type="password"
+                            id="senha"
+                            placeholder="Digite sua senha"
+                            required
+                        >
+
+                        <button
+                            type="button"
+                            id="mostrar-senha"
+                            aria-label="Mostrar senha"
+                        >
+
+                            <i class="fa-solid fa-eye"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- BOTÃO -->
+
+                <button type="submit" class="btn-login">
+                    Entrar
+                </button>
+
+
+                <!-- MENSAGEM -->
+
+                <p id="mensagem-login" class="mensagem-login"></p>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <script src="admin-js/login.js"></script>
+
+</body>
+
+</html>

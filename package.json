@@ -1,0 +1,21 @@
+{
+  "name": "patas-ao-lar",
+  "version": "1.0.0",
+  "description": "Sistema web para auxiliar ONGs na gestão e adoção responsável de animais.",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "start": "node backend/server.js"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.116.0",
+    "bcrypt": "^6.0.0",
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.0",
+    "express": "^5.2.1",
+    "multer": "^2.3.0",
+    "pg": "^8.23.0"
+  }
+}

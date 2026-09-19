@@ -1,0 +1,327 @@
+/* ================================
+   ÁREA PRINCIPAL
+================================ */
+
+.inicio-principal {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 50px;
+
+    min-height: 320px;
+
+    padding: 45px 50px;
+
+    background-color: #FFF8F0;
+
+    border: 1px solid #D7DED8;
+
+    border-left: 5px solid #F4A261;
+
+    border-radius: 8px;
+
+    box-shadow:
+        0 10px 28px rgba(47, 69, 58, 0.07);
+}
+
+
+.inicio-principal-texto {
+    max-width: 650px;
+}
+
+
+.inicio-tag,
+.secao-tag {
+    display: inline-block;
+
+    margin-bottom: 8px;
+
+    color: #F4A261;
+
+    font-size: 0.74rem;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+}
+
+
+.inicio-principal h1 {
+    margin: 0;
+
+    color: #2F453A;
+
+    font-size: clamp(2rem, 4vw, 3rem);
+
+    line-height: 1.15;
+}
+
+
+.inicio-principal h1 strong {
+    color: #F4A261;
+}
+
+
+.inicio-principal p {
+    max-width: 590px;
+
+    margin: 18px 0 0;
+
+    color: #66776D;
+
+    font-size: 1rem;
+
+    line-height: 1.7;
+}
+
+
+/* ================================
+   LOGO
+================================ */
+
+.inicio-principal-logo {
+    width: 220px;
+    height: 220px;
+    min-width: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e0fff0;
+    border-radius: 8px;
+    border: 2px solid #F4A261;
+}
+
+
+.inicio-principal-logo img {
+    width: 80%;
+
+    height: 80%;
+
+    object-fit: contain;
+}
+
+
+/* ================================
+   AÇÕES
+================================ */
+
+.atalhos {
+    margin-top: 38px;
+}
+
+
+.atalhos-cabecalho h2 {
+    margin: 0;
+
+    color: #2F453A;
+
+    font-size: 1.45rem;
+}
+
+
+.atalhos-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 16px;
+
+    margin-top: 18px;
+}
+
+
+/* ================================
+   CARD
+================================ */
+
+.atalho-card {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    min-height: 125px;
+
+    padding: 18px;
+
+    background-color: #FFF8F0;
+
+    border: 1px solid #D7DED8;
+
+    border-radius: 8px;
+
+    color: #2F453A;
+
+    transition:
+        border-color 0.2s,
+        transform 0.2s,
+        box-shadow 0.2s;
+}
+
+
+.atalho-card:hover {
+    border-color: #F4A261;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(47, 69, 58, 0.08);
+}
+
+
+/* ================================
+   ÍCONE
+================================ */
+
+.atalho-icone {
+    width: 48px;
+
+    height: 48px;
+
+    min-width: 48px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background-color: #F4A261;
+
+    border-radius: 6px;
+
+    color: #FFF8F0;
+
+    font-size: 18px;
+}
+
+
+.atalho-conteudo {
+    flex: 1;
+}
+
+
+.atalho-conteudo h3 {
+    margin: 0 0 5px;
+
+    color: #2F453A;
+
+    font-size: 1rem;
+}
+
+
+.atalho-conteudo p {
+    margin: 0;
+
+    color: #6A7B71;
+
+    font-size: 0.84rem;
+
+    line-height: 1.45;
+}
+
+
+.atalho-seta {
+    color: #5F7F70;
+
+    font-size: 14px;
+}
+
+
+/* ================================
+   FUNDO DA PÁGINA
+================================ */
+
+body {
+    background-color: #F7F1E8;
+}
+
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 1000px) {
+
+    .inicio-principal {
+        padding: 35px;
+    }
+
+
+    .inicio-principal-logo {
+        width: 170px;
+
+        height: 170px;
+
+        min-width: 170px;
+    }
+
+
+    .atalhos-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+/* ================================
+   CELULAR
+================================ */
+
+@media (max-width: 700px) {
+
+    .inicio-principal {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        padding: 28px;
+    }
+
+
+    .inicio-principal-logo {
+        width: 130px;
+
+        height: 130px;
+
+        min-width: 130px;
+
+        align-self: center;
+    }
+
+
+    .atalhos-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* ================================
+   CELULAR PEQUENO
+================================ */
+
+@media (max-width: 500px) {
+
+    .inicio-principal {
+        padding: 22px;
+    }
+
+
+    .inicio-principal h1 {
+        font-size: 1.8rem;
+    }
+
+
+    .atalho-card {
+        min-height: 110px;
+
+        padding: 15px;
+    }
+
+}
