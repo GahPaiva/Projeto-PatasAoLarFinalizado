@@ -43,18 +43,21 @@ formulario.addEventListener("submit", async function (event) {
     console.log("Tentando fazer login...");
     console.log("Usuário:", usuario);
 
-    const resposta = await fetch("http://localhost:3000/admin/login", {
-      method: "POST",
+    const resposta = await fetch(
+      "https://patas-ao-lar-api.vercel.app/admin/login",
+      {
+        method: "POST",
 
-      headers: {
-        "Content-Type": "application/json",
+        headers: {
+          "Content-Type": "application/json",
+        },
+
+        body: JSON.stringify({
+          usuario: usuario,
+          senha: senhaDigitada,
+        }),
       },
-
-      body: JSON.stringify({
-        usuario: usuario,
-        senha: senhaDigitada,
-      }),
-    });
+    );
 
     // Pega a resposta como texto
     const texto = await resposta.text();
@@ -87,24 +90,21 @@ formulario.addEventListener("submit", async function (event) {
       return;
     }
 
+    // ================================
+    // LOGIN REALIZADO
+    // ================================
 
-// ================================
-// LOGIN REALIZADO
-// ================================
+    if (resultado.sucesso) {
+      console.log("Login realizado com sucesso!");
 
-if (resultado.sucesso) {
-    console.log("Login realizado com sucesso!");
+      // Marca que o administrador está logado
+      sessionStorage.setItem("adminLogado", "true");
 
-    // Marca que o administrador está logado
-    sessionStorage.setItem("adminLogado", "true");
-
-    window.location.href = "paginas/inicio.html";
-
-} else {
-    mensagemLogin.textContent =
+      window.location.href = "paginas/inicio.html";
+    } else {
+      mensagemLogin.textContent =
         resultado.mensagem || "Usuário ou senha incorretos.";
-}
-
+    }
   } catch (erro) {
     console.error("Erro no login:", erro);
 

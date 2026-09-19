@@ -7,7 +7,7 @@ let petsSalvos = [];
 // Busca os pets através da API
 async function carregarPets() {
   try {
-    const resposta = await fetch("http://localhost:3000/pets");
+    const resposta = await fetch("https://patas-ao-lar-api.vercel.app/pets");
 
     if (!resposta.ok) {
       throw new Error("Erro ao buscar os pets.");

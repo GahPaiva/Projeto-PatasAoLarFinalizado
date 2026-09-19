@@ -24,7 +24,7 @@ let petParaExcluir = null;
 
 async function carregarPets() {
   try {
-    const resposta = await fetch("http://localhost:3000/pets");
+    const resposta = await fetch("https://patas-ao-lar-api.vercel.app/pets");
 
     if (!resposta.ok) {
       throw new Error("Erro ao buscar os animais.");
@@ -236,9 +236,12 @@ confirmarExclusao.addEventListener("click", async function () {
         `;
 
   try {
-    const resposta = await fetch(`http://localhost:3000/pets/${id}`, {
-      method: "DELETE",
-    });
+    const resposta = await fetch(
+      `https://patas-ao-lar-api.vercel.app/pets/${id}`,
+      {
+        method: "DELETE",
+      },
+    );
 
     const resultado = await resposta.json();
 

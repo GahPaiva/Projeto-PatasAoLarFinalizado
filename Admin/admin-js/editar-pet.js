@@ -20,7 +20,7 @@ const fecharMensagem = document.getElementById("fechar-mensagem");
 
 async function carregarPets() {
   try {
-    const resposta = await fetch("http://localhost:3000/pets");
+    const resposta = await fetch("https://patas-ao-lar-api.vercel.app/pets");
 
     if (!resposta.ok) {
       throw new Error("Erro ao buscar os pets.");
@@ -245,7 +245,7 @@ formulario.addEventListener("submit", async function (event) {
     mensagemEdicao.textContent = "Salvando alterações...";
 
     const resposta = await fetch(
-      `http://localhost:3000/pets/${petSelecionado.id}`,
+      `https://patas-ao-lar-api.vercel.app/pets/${petSelecionado.id}`,
       {
         method: "PUT",
         body: dados,
